@@ -1,0 +1,10 @@
+{
+    "name": "imba-base-template",
+    "scripts": {
+        "start": "imba -w app/server.imba",
+        "build": "imba build app/server.imba"
+    },
+    "dependencies": {
+        "imba": "^2.0.0-alpha.119"
+    }
+}
