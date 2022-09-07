@@ -1,11 +1,12 @@
 {
     "name": "imba-base-template",
     "scripts": {
-        "start": "imba -w server.imba",
+        "start": "imba -wmp server.imba",
+        "dev": "imba -wdvsM server.imba",
         "build": "imba build server.imba"
     },
     "dependencies": {
         "express": "^4.17.1",
-        "imba": "^2.0.0-alpha.213"
+        "imba": "^2.0.0-alpha.219"
     }
 }
