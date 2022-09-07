@@ -1,15 +1,24 @@
 import express from 'express'
 import index from './app/index.html'
 
-const app = express!
-
-# A simple state that lives for as long as the server is running
+# A simple state that exists until the server stops
 const state = {
 	count: 0,
 }
 
-app.get('/increment') do(req,res)
-	state.count++
+# Using Imba with Express as the server is quick to set up:
+const app = express()
+const port = process.env.PORT or 3000
+
+# Express works like usual, so we can allow JSON in the POST request:
+const jsonBody = express.json({ limit: '1kb' })
+
+app.post('/increment', jsonBody) do(req,res)
+	# A good exercise here is to add validation for the request body.
+	# For example, what would happen if you send a string instead of a number?
+	state.count += req.body.increment
+
+	# Sending the state back to the client lets us update it right away:
 	res.send({
 		count: state.count
 	})
@@ -25,6 +34,7 @@ app.get(/.*/) do(req,res)
 	unless req.accepts(['image/*', 'html']) == 'html'
 		return res.sendStatus(404)
 
-	res.send index.body
+	res.send(index.body)
 
-imba.serve app.listen(process.env.PORT or 3000)
+# Express is set up and ready to go!
+imba.serve(app.listen(port))
