@@ -4,11 +4,7 @@ Welcome to the Imba base template! Let's get you set up and ready to code!
 
 This codebase has both backend and frontend code, all written in [Imba](https://imba.io).
 
-**NOTE:** If all you need is a simple static website with no server logic, you can check out one of the static hosting templates instead:
-
-- [Netlify](https://github.com/imba/imba-static-netlify-template)
-- [Github Pages](https://github.com/imba/imba-static-github-pages-template)
-- [CloudFlare Pages](https://github.com/imba/imba-static-cloudflare-pages-template)
+**NOTE:** If all you need is a simple static website with no server logic, you can use [static hosting template](https://github.com/imba/imba-vite-template) instead.
 
 The files are named `server.imba` and `client.imba` for simplicity. You can call them anything you want, and organize the code any way you like. As long as your `package.json` [uses your server file](https://github.com/imba/imba-base-template/blob/main/package.json#L4-L6) and your `index.html` [uses your client file](https://github.com/imba/imba-base-template/blob/main/app/index.html#L12), it will work.
 
