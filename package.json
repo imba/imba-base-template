@@ -1,12 +1,17 @@
 {
     "name": "imba-base-template",
     "scripts": {
-        "start": "imba -wmp server.imba",
+        "start": "pm2 start ecosystem.config.js --env production",
+        "reload": "pm2 reload ecosystem.config.js",
         "dev": "imba -wdvsM server.imba",
         "build": "imba build server.imba"
     },
     "dependencies": {
         "express": "^4.17.1",
         "imba": "^2.0.0-alpha.219"
+    },
+    "engines": {
+        "node": ">=16.17.0",
+        "npm": ">=8.15.0"
     }
 }
