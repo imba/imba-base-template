@@ -3,7 +3,8 @@
 	"scripts": {
 		"dev": "imba --base . -w src/index.html",
 		"start": "npm run dev",
-		"build": "imba build --base . src/index.html"
+		"build": "imba build --base . src/index.html",
+		"preview": "npx http-server dist"
 	},
 	"devDependencies": {
 		"imba": "^2.0.0-alpha.223"
